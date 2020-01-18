@@ -1,33 +1,71 @@
-.body {
-    color: #000;
-}
-
+/*--- NAVBAR ----*/
 .navbar {
     background-color: #1A2366;
 }
 
-#log-in,
-#sign-in {
-    margin-left: 5px;
-    margin-right: 5px;
+#navb ul li a {
+    color: #FFFFFF;
 }
 
+#navb ul li .dropdown-menu .dropdown-item {
+    color: #1A2366;
+}
+
+#log-in:hover,
+#sign-in:hover,
+#my-account:hover,
+#btn-search {
+    background-color: #EF9F0B;
+    color: #1A2366;
+}
+
+#log-in,
+#sign-in,
+#my-account{
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #1A2366;
+    border-color: #EF9F0B;
+    color: #EF9F0B;
+    display: block;
+}
+
+#my-account {
+    display: none;
+}
+
+/*-------------*/
+
+
+
+/*--- LOGO ----*/
 .logo {
     padding-top: 10%;
     max-width: 300px;
     height: auto;
 }
 
+/*-------------*/
+
+
+
+/*--- SEARCH ----*/
 #search-form {
     max-width: 625px;
     width: 60%;
 }
 
+/*-------------*/
+
+
+
+/*--- CAROUSEL ----*/
 .carousel-inner img {
     width: 100%;
     height: 100%;
 }
-.container-slides{
+
+.container-slides {
     margin: auto;
     max-width: 700px;
     max-height: 250px;
@@ -39,7 +77,42 @@
     margin: 0px;
 }
 
-.icons {
-    max-width: 40px;
+/*-------------*/
+
+
+
+/*--- GALLERY ----*/
+.gallery h2,
+.gallery p {
+    color: #1A2366;
+}
+
+.gallery a p:hover {
+    color: #EF9F0B;
+    text-decoration: underline;
+    text-decoration-color: #EF9F0B;
+}
+
+/*-------------*/
+
+
+
+/*--- FOOTER ----*/
+footer {
+    background-color: #1A2366;
+    color: #FFF;
+}
+
+a.footer-text {
+    color: #EF9F0B;
+    margin-bottom: 30px;
+}
+
+footer .icons {
+    padding-top: 5px;
+    padding-bottom: 15px;
+    max-width: 30px;
     height: auto;
 }
+
+/*-------------*/
