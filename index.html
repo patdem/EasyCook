@@ -3,22 +3,19 @@
 
 <head>
     <title>EasyCook</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/0ea1bad158.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-dark navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="index.html">
             <img src="icons/home-solid.svg" width="30" height="30" alt="">
         </a>
@@ -33,13 +30,13 @@
                         Posiłki
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Śniadanie</a>
-                        <a class="dropdown-item" href="#">Lunch</a>
-                        <a class="dropdown-item" href="#">Obiad</a>
-                        <a class="dropdown-item" href="#">Kolacja</a>
-                        <a class="dropdown-item" href="#">Deser</a>
-                        <a class="dropdown-item" href="#">Przekąski</a>
-                        <a class="dropdown-item" href="#">Wszystkie przepisy</a>
+                        <a class="dropdown-item" href="przepisy/sniadanie.html">Śniadanie</a>
+                        <a class="dropdown-item" href="przepisy/lunch.html">Lunch</a>
+                        <a class="dropdown-item" href="przepisy/obiad.html">Obiad</a>
+                        <a class="dropdown-item" href="przepisy/kolacja.html">Kolacja</a>
+                        <a class="dropdown-item" href="przepisy/deser.html">Deser</a>
+                        <a class="dropdown-item" href="przepisy/przekaski.html">Przekąski</a>
+                        <a class="dropdown-item" href="przepisy/wszystkie-przepisy.html">Wszystkie przepisy</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -47,11 +44,11 @@
                         Diety
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Wegańskie</a>
-                        <a class="dropdown-item" href="#">Wegetariańskie</a>
-                        <a class="dropdown-item" href="#">Bez laktozy</a>
-                        <a class="dropdown-item" href="#">Bez glutenu</a>
-                        <a class="dropdown-item" href="#">Wszystkie przepisy</a>
+                        <a class="dropdown-item" href="przepisy/weganskie.html">Wegańskie</a>
+                        <a class="dropdown-item" href="przepisy/wegetarianskie.html">Wegetariańskie</a>
+                        <a class="dropdown-item" href="przepisy/bez-laktozy.html">Bez laktozy</a>
+                        <a class="dropdown-item" href="przepisy/bez-glutenu.html">Bez glutenu</a>
+                        <a class="dropdown-item" href="przepisy/wszystkie-przepisy.html">Wszystkie przepisy</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -59,25 +56,25 @@
                         Poziom trudności
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Łatwy</a>
-                        <a class="dropdown-item" href="#">Średni</a>
-                        <a class="dropdown-item" href="#">Trudy</a>
-                        <a class="dropdown-item" href="#">Wszystkie przepisy</a>
+                        <a class="dropdown-item" href="przepisy/latwy.html">Łatwy</a>
+                        <a class="dropdown-item" href="przepisy/sredni.html">Średni</a>
+                        <a class="dropdown-item" href="przepisy/trudny.html">Trudny</a>
+                        <a class="dropdown-item" href="przepisy/wszystkie-przepisy.html">Wszystkie przepisy</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Gotowanie z dzieckiem</a>
+                    <a class="nav-link" href="nauka-przez-gotowanie/gotowanie-z-dzieckiem.html">Gotowanie z dzieckiem</a>
                 </li>
             </ul>
             <ul class="nav justify-content-end">
                 <li class="nav-item button">
-                    <button type="button" class="btn font-weight-bold" id="log-in">Zaloguj się</button>
+                    <button type="button" class="btn font-weight-bold" id="log-in" href="konto/logowanie-rejestracja.html">Zaloguj się</button>
                 </li>
                 <li>
-                    <button type="button" class="btn font-weight-bold" id="sign-in">Załóż konto</button>
+                    <button type="button" class="btn font-weight-bold" id="sign-in" href="konto/logowanie-rejestracja.html">Załóż konto</button>
                 </li>
                 <li>
-                    <button type="button" class="btn font-weight-bold" id="my-account">Moje konto</button>
+                    <button type="button" class="btn font-weight-bold" id="my-account" href="konto/moje-konto.html">Moje konto</button>
                 </li>
             </ul>
         </div>
@@ -106,7 +103,7 @@
                         </ul>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <a href="#!">
+                                <a href="przepis-na-danie/makaron-z-tunczykiem-oliwkami.html">
                                     <img src="img/makaron_z_tunczykiem_oliwkami.jpg" alt="Makaron z tunczykiem i oliwkami">
                                     <div class="carousel-caption">
                                         <h4 id="bg-slides">Makaron z tuńczykiem i oliwkami</h4>
@@ -114,7 +111,7 @@
                                 </a>
                             </div>
                             <div class="carousel-item">
-                                <a href="#!">
+                                <a href="przepis-na-danie/przepis.html">
                                     <img src="img/salatka_pieczone_bataty_ciecierzyca.jpg" alt="Salatka z pieczonych batatow z ciecierzyca">
                                     <div class="carousel-caption">
                                         <h4 id="bg-slides">Sałatka z pieczonych batatów i ciecierzycy</h4>
@@ -122,7 +119,7 @@
                                 </a>
                             </div>
                             <div class="carousel-item">
-                                <a href="#!">
+                                <a href="przepis-na-danie/przepis.html">
                                     <img src="img/brownie_z_maslem_orzechowym.jpg" alt="Brownie z maslem orzechowym">
                                     <div class="carousel-caption">
                                         <h4 id="bg-slides">Brownie z masłem orzechowym</h4>
@@ -163,25 +160,25 @@
             <div class="row text-center text-lg-left">
 
                 <div class="col-lg-3 col-md-3 col-6">
-                    <a href="#" class="d-block mb-4 text-dark">
+                    <a href="przepis-na-danie/makaron-z-tunczykiem-oliwkami.html" class="d-block mb-4 text-dark">
                         <img class="mini-img img-fluid img-thumbnail" src="img/makaron_z_tunczykiem_oliwkami_01.jpg" alt="">
                         <p class="text-center">Makaron z tuńczykiem i oliwkami</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-3 col-6">
-                    <a href="#" class="d-block mb-4 text-dark">
+                    <a href="przepis-na-danie/przepis.html" class="d-block mb-4 text-dark">
                         <img class="img-fluid img-thumbnail" src="img/kurczak_po_meksykansku_01.jpg" alt="">
                         <p class="text-center">Kurczak po meksykańsku</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-3 col-6">
-                    <a href="#" class="d-block mb-4 text-dark">
+                    <a href="przepis-na-danie/przepis.html" class="d-block mb-4 text-dark">
                         <img class="img-fluid img-thumbnail" src="img/nalesniki_maslankowe_01.jpg" alt="">
                         <p class="text-center">Naleśniki maślankowe</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-3 col-6">
-                    <a href="#" class="d-block mb-4 text-dark">
+                    <a href="przepis-na-danie/przepis.html" class="d-block mb-4 text-dark">
                         <img class="img-fluid img-thumbnail" src="img/pieczone_frytki_z_warzyw_01.jpg" alt="">
                         <p class="text-center">Pieczone frytki z warzyw</p>
                     </a>
@@ -198,25 +195,25 @@
 
             <div class="row text-center text-lg-left">
                 <div class="col-lg-3 col-md-3 col-6">
-                    <a href="#" class="d-block mb-4 h-100 text-dark">
+                    <a href="przepis-na-danie/przepis.html" class="d-block mb-4 h-100 text-dark">
                         <img class="img-fluid img-thumbnail" src="img/brownie_z_maslem_orzechowym_01.jpg" alt="">
                         <p class="text-center ">Brownie z masłem orzechowym</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-3 col-6">
-                    <a href="#" class="d-block mb-4 h-100 text-dark">
+                    <a href="przepis-na-danie/przepis.html" class="d-block mb-4 h-100 text-dark">
                         <img class="img-fluid img-thumbnail" src="img/gulasz_z_cukinii_01.jpg" alt="">
                         <p class="text-center">Gulasz z cukinii</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-3 col-6">
-                    <a href="#" class="d-block mb-4 h-100 text-dark">
+                    <a href="przepis-na-danie/przepis.html" class="d-block mb-4 h-100 text-dark">
                         <img class="img-fluid img-thumbnail" src="img/makaron_zapiekany_z_cukinia_boczkiem_01.jpg" alt="">
                         <p class="text-center">Makaron zapiekany z cukinią i boczkiem</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-3 col-6">
-                    <a href="#" class="d-block mb-4 h-100 text-dark">
+                    <a href="przepis-na-danie/przepis.html" class="d-block mb-4 h-100 text-dark">
                         <img class="img-fluid img-thumbnail" src="img/owsianka_z_prazonymi_jablkami_01.jpg" alt="">
                         <p class="text-center">Owsianka z prażonymi jabłkami</p>
                     </a>
@@ -233,25 +230,25 @@
 
             <div class="row text-center text-lg-left">
                 <div class="col-lg-3 col-md-3 col-6">
-                    <a href="#" class="d-block mb-4 h-100 text-dark">
+                    <a href="przepis-na-danie/przepis.html" class="d-block mb-4 h-100 text-dark">
                         <img class="img-fluid img-thumbnail" src="img/salatka_owocowa_01.jpg" alt="">
                         <p class="text-center">Sałatka owocowa</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-3 col-6">
-                    <a href="#" class="d-block mb-4 h-100 text-dark">
+                    <a href="przepis-na-danie/przepis.html" class="d-block mb-4 h-100 text-dark">
                         <img class="img-fluid img-thumbnail" src="img/salatka_pieczone_bataty_ciecierzyca_01.jpg" alt="">
-                        <p class="text-center">Sałatka z pieczonych babatów i ciecierzycy</p>
+                        <p class="text-center">Sałatka z pieczonych batatów i ciecierzycy</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-3 col-6">
-                    <a href="#" class="d-block mb-4 h-100 text-dark">
+                    <a href="przepis-na-danie/przepis.html" class="d-block mb-4 h-100 text-dark">
                         <img class="img-fluid img-thumbnail" src="img/tosty_z_jajaecznica_boczkiem_awokado_01.jpg" alt="">
                         <p class="text-center">Tosty z jajecznicą, boczkiem i awokado</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-3 col-6">
-                    <a href="#" class="d-block mb-4 h-100 text-dark">
+                    <a href="przepis-na-danie/przepis.html" class="d-block mb-4 h-100 text-dark">
                         <img class="img-fluid img-thumbnail" src="img/zupa_curry_z_cukinia_01.jpg" alt="">
                         <p class="text-center">Zupa curry z cukinią</p>
                     </a>
@@ -270,9 +267,9 @@
                 <div class="col mx-auto">
                     <h5 class="font-weight-bold text-uppercase text-center mt-3 mb-3">Przydatne linki</h5>
                     <div class="row text-center mt-4">
-                        <div class="col"><a class="footer-text font-weight-bold" href="#!">O nas</a></div>
-                        <div class="col"><a class="footer-text font-weight-bold" href="#!">Kontakt</a></div>
-                        <div class="col"><a class="footer-text font-weight-bold" href="#!">Regulamin</a></div>
+                        <div class="col"><a class="footer-text font-weight-bold" href="serwis/o-nas.html">O nas</a></div>
+                        <div class="col"><a class="footer-text font-weight-bold" href="serwis/kontakt.html">Kontakt</a></div>
+                        <div class="col"><a class="footer-text font-weight-bold" href="serwis/regulamin.html">Regulamin</a></div>
                     </div>
                 </div>
                 <hr class="clearfix w-100 d-md-none">
@@ -303,6 +300,14 @@
         </div>
     </footer>
     <!-- /Footer -->
+
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/0ea1bad158.js" crossorigin="anonymous"></script>
+    <!-- /scripts -->
 
 </body>
 

@@ -11,17 +11,18 @@
     color: #1A2366;
 }
 
-#log-in:hover,
-#sign-in:hover,
-#my-account:hover,
+#navb ul li a#log-in:hover,
+#navb ul li a#sign-in:hover,
+#navb ul li a#my-account:hover,
 #btn-search {
     background-color: #EF9F0B;
     color: #1A2366;
 }
 
-#log-in,
-#sign-in,
-#my-account{
+
+#navb ul li a#log-in,
+#navb ul li a#sign-in,
+#navb ul li a#my-account {
     margin-left: 5px;
     margin-right: 5px;
     background-color: #1A2366;
@@ -30,7 +31,7 @@
     display: block;
 }
 
-#my-account {
+#navb ul li a#my-account {
     display: none;
 }
 
@@ -43,6 +44,22 @@
     padding-top: 10%;
     max-width: 300px;
     height: auto;
+}
+
+.logo-posilki {
+    max-width: 200px;
+    height: auto;
+}
+
+/*-------------*/
+
+
+
+/*--- BREADCRUMB ----*/
+.breadcrumb-img {
+    width: 20px;
+    height: 20px;
+    margin: auto auto 4px auto;
 }
 
 /*-------------*/
@@ -91,6 +108,26 @@
     color: #EF9F0B;
     text-decoration: underline;
     text-decoration-color: #EF9F0B;
+}
+
+/*-------------*/
+
+
+
+/*--- PAGINATION ----*/
+.page-nav .pagination li a,
+.page-nav .pagination li span {
+    color: #1A2366;
+}
+
+.page-nav .pagination li a:hover,
+.page-nav .pagination li a span:hover {
+    background-color: #1A2366;
+    color: #EF9F0B;
+}
+
+.page-nav .pagination li span.activ {
+    background-color: #EF9F0B;
 }
 
 /*-------------*/
