@@ -10,19 +10,30 @@
 #navb ul li .dropdown-menu .dropdown-item {
     color: #1A2366;
 }
+/*-------------*/
 
+
+
+/*--- BUTTONS ----*/
 #navb ul li a#log-in:hover,
 #navb ul li a#sign-in:hover,
 #navb ul li a#my-account:hover,
-#btn-search {
+#btn-search,
+#see-all:hover,
+#comment:hover,
+#save:hover,
+#share:hover,
+#sort:hover,
+filtr:hover {
     background-color: #EF9F0B;
     color: #1A2366;
 }
 
-
 #navb ul li a#log-in,
 #navb ul li a#sign-in,
-#navb ul li a#my-account {
+#navb ul li a#my-account,
+#sort,
+filtr {
     margin-left: 5px;
     margin-right: 5px;
     background-color: #1A2366;
@@ -33,6 +44,16 @@
 
 #navb ul li a#my-account {
     display: none;
+}
+
+#see-all,
+#comment,
+#save,
+#share {
+    margin-top: 15px;
+    background-color: #1A2366;
+    border-color: #EF9F0B;
+    color: #EF9F0B;
 }
 
 /*-------------*/
@@ -130,6 +151,15 @@
     background-color: #EF9F0B;
 }
 
+/*-------------*/
+
+
+
+/*--- FOOTER ----*/
+.recipe {
+    margin-left: 5%;
+    margin-right: 10%;
+}
 /*-------------*/
 
 
