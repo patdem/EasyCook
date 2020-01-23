@@ -131,7 +131,7 @@ filtr {
     text-decoration-color: #EF9F0B;
 }
 
-/*-------------*/
+
 
 
 
@@ -402,3 +402,13 @@ footer .icons {
     margin: 10px;
 }
 /*-------------*/
+/*-------FORMAT------*/
+.bg-over{
+
+
+	text-shadow: 4px 4px 4px black;
+	color:#242424;
+
+   
+
+}
