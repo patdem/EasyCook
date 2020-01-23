@@ -10,6 +10,15 @@
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/0ea1bad158.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
 </head>
 
 <body>
@@ -68,10 +77,7 @@
             </ul>
             <ul class="nav justify-content-end">
                 <li class="nav-item button">
-                    <a href="../konto/logowanie-rejestracja.html" class="btn font-weight-bold" id="log-in">Zaloguj się</a>
-                </li>
-                <li>
-                    <a href="./../konto/logowanie-rejestracja.html" class="btn font-weight-bold" id="sign-in">Załóż konto</a>
+                    <a href="../konto/logowanie-rejestracja.html" class="btn font-weight-bold" id="log-in">Zaloguj / Załóż konto</a>
                 </li>
                 <li>
                     <a href="../konto/moje-konto.html" class="btn font-weight-bold" class="btn font-weight-bold" id="my-account">Moje konto</a>
@@ -82,9 +88,111 @@
     <!-- /Navbar -->
 
 
-    <div class="container">
-        <h2>Główny kontener strony - LOGOWANIE REJESTRACJA</h2>
+    <!-- Login -->
+
+    <!-- Button trigger modal register -->
+    <button type="button" class="btn btn-primary" id="nobutton2" data-toggle="modal" data-target="#exampleModal2">
+    </button>
+
+    <!-- Modal register -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Przypominanie hasła</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="center" src="../img/logo.png" alt="LOGO">
+                    Wprowadź adres e-mail podawany podczas rejestarcji:
+                    <input type="email" placeholder="E-mail">
+                    Zostanie na niego wysłany link zawierający instrukcje do zmiany hasła.
+                </div>
+                <div class="modal-footer">
+                    <p id="reset">Wysłano! Sprawdź swojego maila.</p>
+                    <button type="button" onclick="reset()">Resetuj hasło</button>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Button trigger modal register -->
+    <button type="button" class="btn btn-primary" id="nobutton" data-toggle="modal" data-target="#exampleModal">
+    </button>
+
+    <!-- Modal register -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Witamy w rodzinie EasyCook!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="center" src="../img/logo.png" alt="LOGO">
+                    Na podany adres e-mail została wysłana wiadomość zawierająca link aktywujący konto.
+                </div>
+                <div class="modal-footer">
+                    <p id="again">Wysłano ponownie!</p>
+                    <button type="button" onclick="again()">Wyślij ponownie</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LogIn Panel -->
+    <div id="logowanie" class="container-fluid">
+        <div class="login-reg-panel">
+            <div class="login-info-box">
+                <h2>Masz konto?</h2>
+                <p>Zaloguj się podając adres e-mail i hasło wybrane podczas rejestracji.</p>
+                <label id="label-register" for="log-reg-show">Logowanie</label>
+                <input type="radio" name="active-log-panel" id="log-reg-show" checked="checked">
+            </div>
+
+            <div class="register-info-box">
+                <h2>Nie masz konta?</h2>
+                <p>Załóż konto w dwóch prostych krokach i ciesz się korzyściami płynącymi z posiadania konta.</p>
+                <label id="label-login" for="log-login-show">Rejestracja</label>
+                <input type="radio" name="active-log-panel" id="log-login-show">
+            </div>
+
+            <div class="white-panel">
+                <div class="login-show">
+                    <img src="../img/logo.png" alt="LOGO">
+                    <h2>LOGOWANIE</h2>
+                    <input type="email" placeholder="E-mail" id="log-email">
+                    <h4>blank</h4>
+                    <input type="password" placeholder="Hasło" id="log-password">
+                    <input type="button" onclick="login()" value="Zaloguj">
+                    <a type="button" onclick="forget()">Zapomniałeś hasła?</a>
+                    <h3 id="log-error">Błędny e-mail lub hasło!</h3>
+                </div>
+                <div class="register-show">
+                    <img src="../img/logo.png" alt="LOGO">
+                    <h2>REJESTRACJA</h2>
+                    <input type="email" placeholder="E-mail" id="reg-email">
+                    <h4 id="reg-error">Podany e-mail znajduje się już w bazie!</h4>
+                    <input type="password" placeholder="Hasło*" id="reg-password">
+                    <h4 id="reg-error2">Podane hasło jest za krótkie!</h4>
+                    <input type="password" placeholder="Potwierdź hasło*" id="reg-password2">
+                    <h4 id="reg-error3">Podane hasła różnią się!</h4>
+                    <input type="button" onclick="register()" value="Zarejestruj">
+                    <p style="color: gray">*hasło powinno składać się z co najmniej 6 znaków</p>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- /Login -->
 
     <!-- Footer -->
     <footer id="sticky-footer" class="py-4">
@@ -126,15 +234,162 @@
         </div>
     </footer>
     <!-- /Footer -->
-
-
-    <!-- scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/0ea1bad158.js" crossorigin="anonymous"></script>
-    <!-- /scripts -->
-
 </body>
+
+<script>
+
+    $(document).ready(function () {
+        $('.login-info-box').fadeOut();
+        $('.login-show').addClass('show-log-panel');
+    });
+
+
+    $('.login-reg-panel input[type="radio"]').on('change', function () {
+        if ($('#log-login-show').is(':checked')) {
+            $('.register-info-box').fadeOut();
+            $('.login-info-box').fadeIn();
+
+            start();
+
+            $('.white-panel').addClass('right-log');
+            $('.register-show').addClass('show-log-panel');
+            $('.login-show').removeClass('show-log-panel');
+
+        } else if ($('#log-reg-show').is(':checked')) {
+            $('.register-info-box').fadeIn();
+            $('.login-info-box').fadeOut();
+
+            $('.white-panel').removeClass('right-log');
+
+            $('.login-show').addClass('show-log-panel');
+            $('.register-show').removeClass('show-log-panel');
+        }
+    });
+
+    //Ukrywam okno z komunikatem
+    $(function() {
+        $( "#exampleModalCenter" ).dialog({
+            autoOpen: false,
+            show: {
+                duration: 0
+            },
+            hide: {
+                duration: 0
+            }
+        });
+    });
+
+
+    function login() {
+        var email = document.getElementById("log-email").value;
+        var password = document.getElementById("log-password").value;
+
+        if (email == "aaaa" && password == "aaaa") {
+            alert("Zalogowano")
+        }
+
+        if (email != "aaaa" || password != "aaaa") {
+            //$( "#nobutton" ).click();
+            var x = document.getElementById("log-error");
+            x.setAttribute("style", "visibility: visible");
+
+            var y = document.getElementById("log-email");
+            y.setAttribute("style", "border: 2px solid red");
+
+            var z = document.getElementById("log-password");
+            z.setAttribute("style", "border: 2px solid red");
+
+        }
+    }
+    function forget() {
+        $( "#nobutton2" ).click();
+    }
+    function reset() {
+        var x = document.getElementById("reset");
+        x.setAttribute("style", "visibility: visible");
+    }
+    function register() {
+        var email = document.getElementById("reg-email").value;
+        var password = document.getElementById("reg-password").value;
+        var password2 = document.getElementById("reg-password2").value;
+
+        if (email != "aaaa" && email.length > 3 && password.length >= 6 && password == password2) {
+            $( "#nobutton" ).click();
+        }
+
+        if (email == "aaaa") {
+            var x = document.getElementById("reg-error");
+            x.setAttribute("style", "visibility: visible");
+            var y = document.getElementById("reg-email");
+            y.setAttribute("style", "border: 2px solid red");
+        } else {
+            var a = document.getElementById("reg-error");
+            a.setAttribute("style", "visibility: hidden");
+            var b = document.getElementById("reg-email");
+            b.setAttribute("style", "border-color: #b5b5b5");
+        }
+
+        if(password.length < 6) {
+            var x = document.getElementById("reg-error2");
+            x.setAttribute("style", "visibility: visible");
+            var y = document.getElementById("reg-password");
+            y.setAttribute("style", "border: 2px solid red");
+        } else {
+            var c = document.getElementById("reg-error2");
+            c.setAttribute("style", "visibility: hidden");
+            var d = document.getElementById("reg-password");
+            d.setAttribute("style", "border-color: #b5b5b5");
+        }
+
+        if(password != password2) {
+            var x = document.getElementById("reg-error3");
+            x.setAttribute("style", "visibility: visible");
+            var y = document.getElementById("reg-password2");
+            y.setAttribute("style", "border: 2px solid red");
+        } else {
+            var e = document.getElementById("reg-error3");
+            e.setAttribute("style", "visibility: hidden");
+            var f = document.getElementById("reg-password2");
+            f.setAttribute("style", "border-color: #b5b5b5");
+        }
+    }
+
+    async function again() {
+        var x = document.getElementById("again");
+        x.setAttribute("style", "visibility: visible");
+        await new Promise(r => setTimeout(r, 3000));
+        x.setAttribute("style", "visibility: hidden");
+
+    }
+
+    function start() {
+        var x = document.getElementById("log-error");
+        x.setAttribute("style", "visibility: hidden");
+
+        var y = document.getElementById("log-email");
+        y.setAttribute("style", "border-color: #b5b5b5");
+
+        var z = document.getElementById("log-password");
+        z.setAttribute("style", "border-color: #b5b5b5");
+
+        var a = document.getElementById("reg-error");
+        a.setAttribute("style", "visibility: hidden");
+
+        var b = document.getElementById("reg-email");
+        b.setAttribute("style", "border-color: #b5b5b5");
+
+        var c = document.getElementById("reg-error2");
+        c.setAttribute("style", "visibility: hidden");
+
+        var d = document.getElementById("reg-password");
+        d.setAttribute("style", "border-color: #b5b5b5");
+
+        var e = document.getElementById("reg-error3");
+        e.setAttribute("style", "visibility: hidden");
+
+        var f = document.getElementById("reg-password2");
+        f.setAttribute("style", "border-color: #b5b5b5");
+    }
+</script>
 
 </html>
