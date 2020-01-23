@@ -73,6 +73,9 @@
                 <li>
                     <a href="./konto/moje-konto.html" class="btn font-weight-bold" class="btn font-weight-bold" id="my-account">Moje konto</a>
                 </li>
+                <li>
+                    <a href="../index.html" class="btn font-weight-bold" class="btn font-weight-bold" onclick="logout()" id="log-out">Wyloguj</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -138,10 +141,12 @@
 
                 <!-- Search -->
                 <br>
-                <form class="form-inline justify-content-center" action="">
+                <form class="form-inline justify-content-center">
                     <label for="search" class="mb-2 mr-sm-2"></label>
-                    <input type="search" class="form-control mb-2 mr-sm-2" id="search-form" placeholder="Szukaj..." name="search">
-                    <button type="submit" class="btn mb-2" id="btn-search"><i class="fas fa-search"></i></button>
+                    <div class="autocomplete">
+                        <input type="search" class="form-control" id="myInput" name="myCountry" placeholder="Szukaj...">
+                    </div>
+                    <button type="button" class="btn" id="btn-search" onclick="search()"><i class="fas fa-search"></i></button>
                 </form>
                 <br>
                 <!-- /Search -->
@@ -310,8 +315,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/0ea1bad158.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     <!-- /scripts -->
 
 </body>
+
+<script>
+    var cookies = document.cookie;
+
+    if (cookies == "zalogowany=tak") {
+        var x = document.getElementById("log-in");
+        x.setAttribute("style", "display: none");
+        var x = document.getElementById("my-account");
+        x.setAttribute("style", "display: block");
+        var x = document.getElementById("log-out");
+        x.setAttribute("style", "display: block");
+    }
+
+    function logout() {
+        document.cookie = "zalogowany=nie; path=/;";
+        location.replace("index.html");
+    }
+</script>
 
 </html>

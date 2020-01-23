@@ -73,6 +73,9 @@
                 <li>
                     <a href="../konto/moje-konto.html" class="btn font-weight-bold" class="btn font-weight-bold" id="my-account">Moje konto</a>
                 </li>
+                <li>
+                    <a href="../index.html" class="btn font-weight-bold" class="btn font-weight-bold" onclick="logout()" id="log-out">Wyloguj</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -133,5 +136,24 @@
     <!-- /scripts -->
 
 </body>
+
+<script>
+    var cookies = document.cookie;
+
+    if (cookies == "zalogowany=tak") {
+        var x = document.getElementById("log-in");
+        x.setAttribute("style", "display: none");
+        var x = document.getElementById("my-account");
+        x.setAttribute("style", "display: block");
+        var x = document.getElementById("log-out");
+        x.setAttribute("style", "display: block");
+    }
+
+    function logout() {
+        document.cookie = "zalogowany=nie; path=/;";
+        location.replace("../index.html");
+    }
+
+</script>
 
 </html>
