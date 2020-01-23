@@ -121,7 +121,7 @@ filtr {
     text-decoration-color: #EF9F0B;
 }
 
-/*-------------*/
+
 
 
 
@@ -392,6 +392,7 @@ footer .icons {
     margin: 10px;
 }
 /*-------------*/
+<<<<<<< HEAD
 
 /*--- SEARCH ----*/
 #search-form {
@@ -433,3 +434,15 @@ footer .icons {
     color: #ffffff;
 }
 /*-------------*/
+=======
+/*-------FORMAT------*/
+.bg-over{
+
+
+	text-shadow: 4px 4px 4px black;
+	color:#242424;
+
+   
+
+}
+>>>>>>> 7d34238d2b05845c67c235485e2738914af06d4f

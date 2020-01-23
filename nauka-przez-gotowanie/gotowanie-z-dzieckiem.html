@@ -1,3 +1,4 @@
+<!----- Ania ------>
 <!DOCTYPE html>
 <html lang="pl-PL">
 
@@ -82,9 +83,161 @@
     <!-- /Navbar -->
 
 
-    <div class="container">
-        <h2>Główny kontener strony - GOTOWANIE Z DZIECKIEM</h2>
+    <div class="container-fluid">
+         <br>
+
+        <div class=row">
+            <h1 class="font-weight-light text-center text-lg-middle mt-4 mb-0 ">Cześć dzielny kucharzu! Co chciałbyś dzisiaj ugotować?</h1>
+            <br>
+            <br>
+            <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                               <!-- Carousel -->
+                <div class="container-slides">
+                    <div id="demo" class="carousel slide" data-ride="carousel">
+                        <ul class="carousel-indicators">
+                            <li data-target="#demo" data-slide-to="0" class="active"></li>
+                            <li data-target="#demo" data-slide-to="1"></li>
+                            <li data-target="#demo" data-slide-to="2"></li>
+                        </ul>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="../przepis-na-danie/nalesniki-maslankowe.html">
+                                    <img src="../img/nalesniki_maslankowe.jpg" alt="Nalesniki maslankowe">
+                                    <div class="carousel-caption">
+                                        <h4 id="bg-slides">Naleśniki maślankowe</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="przepis-na-danie/przepis.html">
+                                    <img src="../img/puszyste_placuszki_pancakes.jpg" alt="Puszyste placuszki pancakes">
+                                    <div class="carousel-caption">
+                                        <h4 id="bg-slides">Puszyste placuszki pancakes</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="przepis-na-danie/przepis.html">
+                                    <img src="../img/brownie_z_maslem_orzechowym.jpg" alt="Brownie z maslem orzechowym">
+                                    <div class="carousel-caption">
+                                        <h4 id="bg-slides">Brownie z masłem orzechowym</h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+                <br>
+                <!-- /Carousel -->
+                <!-- Search -->
+                 <br>
+                <form class="form-inline justify-content-center" action="">
+                    <label for="search" class="mb-2 mr-sm-2"></label>
+                    <input type="search" class="form-control mb-2 mr-sm-2" id="search-form" placeholder="Szukaj..." name="search">
+                    <button type="submit" class="btn mb-2" id="btn-search"><i class="fas fa-search"></i></button>
+                </form>
+                <br>
+                <!---/Search--->
+            </div>
+        </div>
+        <div class ="container gallery">
+            <h2 class="font-weight-light text-left text-lg-middle mt-4 mb-0 ">Sprawdź jak zdobyć te odznaki!</h2>
+            <hr class="mt-2 mb-5">
+            <div class="row text-center text-lg-left">
+
+                <div class="col-lg-3 col-md-3 col-6">
+                    <a href="../przepis-na-danie/makaron-z-tunczykiem-oliwkami.html" class="d-block mb-4 text-dark">
+                        <img class="mini-img img-fluid " src="../img/odznaka_pocz.png" alt="początkujący">
+                        <p class="text-center">Już nie taki początkujący!</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <a href="przepis-na-danie/przepis.html" class="d-block mb-4 text-dark">
+                        <img class="img-fluid " src="../img/odznaka_czeko.png" alt="czeko">
+                        <p class="text-center">Czekolaaada!</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <a href="przepis-na-danie/przepis.html" class="d-block mb-4 text-dark">
+                        <img class="img-fluid " src="../img/odznaka_sam.png" alt="">
+                        <p class="text-center">Zrobiłem to sam!</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <a href="przepis-na-danie/przepis.html" class="d-block mb-4 text-dark">
+                        <img class="img-fluid " src="../img/odznaka_ziemniak.png" alt="">
+                        <p class="text-center">Ziemniak to nie tylko frytki!</p>
+                    </a>
+                </div>
+
+            </div>
+                <hr class="mt-2 mb-5">
+        </div>
+
+          <div class="container-gallery text-center">
+              <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <h1 class="font-weight-light text-center text-lg-middle mt-4 mb-0 ">Wypróbuj ten przepis z rodzicami</h1>
+              <br>
+              <br>
+                  <a href src ="#" alt="">
+                      <img class="img-fluid " src="../img/paluchy_pizzowe_1.png" alt="paluchy pizzowe">
+                  </a>
+              </div>
+          </div>
+        <br>
+        <br>
+         <div class ="container gallery">
+            <h2 class="font-weight-light text-left text-lg-middle mt-4 mb-0 ">Te przepisy podobają się Twoim kolegom</h2>
+            <hr class="mt-2 mb-5">
+            <div class="row text-center text-lg-left">
+
+                <div class="col-lg-3 col-md-3 col-6">
+                    <a href="../przepis-na-danie/makaron-z-tunczykiem-oliwkami.html" class="d-block mb-4 text-dark">
+                        <img class="mini-img img-fluid img-thumbnail" src="../img/ciasto_lion_01.jpg" alt="ciasto lion">
+                        <p class="text-center">Ciasto Lion</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <a href="przepis-na-danie/przepis.html" class="d-block mb-4 text-dark">
+                        <img class="img-fluid img-thumbnail" src="../img/zapiekanki_z_pieczarkami_01.jpg" alt="zapiekanka">
+                        <p class="text-center">Zapiekanki z pieczarkami i serem</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <a href="przepis-na-danie/przepis.html" class="d-block mb-4 text-dark">
+                        <img class="img-fluid img-thumbnail" src="../img/kompot_01_0.jpg" alt="">
+                        <p class="text-center">Kompot</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <a href="przepis-na-danie/przepis.html" class="d-block mb-4 text-dark">
+                        <img class="img-fluid img-thumbnail" src="../img/pieczone_nuggetsy_01.jpg" alt="">
+                        <p class="text-center">Pieczone nuggetsy z kurczaka w płatkach kukurydzianych</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+          <!-- /Gallery -->
+        <div class="row">
+            <div class="col" style="text-align:center;">
+                <a href="../przepisy/wszystkie-przepisy.html" class="btn btn-lg" id="see-all">Zobacz wszystkie przepisy</a>
+            </div>
+        </div>
+        <br>
+        <br>
     </div>
+
+    </div>
+
+
+
 
     <!-- Footer -->
     <footer id="sticky-footer" class="py-4">
