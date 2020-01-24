@@ -158,7 +158,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    Musisz być zalogowany, aby móc zapisać przepis.
+                    Musisz być zalogowany, aby móc dodać przepis do ulubionych.
                 </div>
                 <div class="modal-footer center" style="text-align: center">
                     <button onclick="account()" type="button" style="margin-right: 50px">Zaloguj</button>
@@ -371,7 +371,7 @@
 <script>
     var cookies = document.cookie;
 
-    if (cookies == "zalogowany=tak") {
+    if (cookies === "zalogowany=tak") {
         var x = document.getElementById("log-in");
         x.setAttribute("style", "display: none");
         var x = document.getElementById("my-account");
@@ -399,7 +399,7 @@
     });
 
     function comment() {
-        if (cookies === "zalogowany=nie") {
+        if (cookies !== "zalogowany=tak") {
             $( "#nobutton" ).click();
         }
         if (cookies === "zalogowany=tak") {
@@ -424,7 +424,7 @@
     }
 
     function add_recipe() {
-        if (cookies === "zalogowany=nie") {
+        if (cookies !== "zalogowany=tak") {
             $( "#nobutton4" ).click();
         }
         if (cookies === "zalogowany=tak") {
