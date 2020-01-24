@@ -107,7 +107,7 @@
                 <div class="modal-body">
                     <img class="center" src="../img/logo.png" alt="LOGO">
                     Wprowadź adres e-mail podawany podczas rejestarcji:
-                    <input type="email" placeholder="E-mail">
+                    <input type="email" placeholder="E-mail" id="wrong-email">
                     Zostanie na niego wysłany link zawierający instrukcje do zmiany hasła.
                 </div>
                 <div class="modal-footer">
@@ -283,13 +283,18 @@
     function login() {
         var email = document.getElementById("log-email").value;
         var password = document.getElementById("log-password").value;
+        var cookies = document.cookie;
 
-        if (email == "aaaa" && password == "aaaa") {
-            alert("Zalogowano")
+        if (email == "jan@wp.pl" && password == "janusz") {
+            var x = document.getElementById("log-in");
+            x.setAttribute("style", "display: none");
+            var x = document.getElementById("my-account");
+            x.setAttribute("style", "display: block");
+            document.cookie = "zalogowany=tak; path=/;";
+            location.replace("../index.html");
         }
 
-        if (email != "aaaa" || password != "aaaa") {
-            //$( "#nobutton" ).click();
+        if (email != "jan@wp.pl" || password != "janusz") {
             var x = document.getElementById("log-error");
             x.setAttribute("style", "visibility: visible");
 
@@ -305,19 +310,26 @@
         $( "#nobutton2" ).click();
     }
     function reset() {
-        var x = document.getElementById("reset");
-        x.setAttribute("style", "visibility: visible");
+        if(document.getElementById("wrong-email").value == "") {
+            document.getElementById("reset").innerHTML = "Błąd! Podaj swój adres e-mail.";
+            var x = document.getElementById("reset");
+            x.setAttribute("style", "visibility: visible");
+        } else {
+            document.getElementById("reset").innerHTML = "Wysłano! Sprawdź swojego maila.";
+            var x = document.getElementById("reset");
+            x.setAttribute("style", "visibility: visible");
+        }
     }
     function register() {
         var email = document.getElementById("reg-email").value;
         var password = document.getElementById("reg-password").value;
         var password2 = document.getElementById("reg-password2").value;
 
-        if (email != "aaaa" && email.length > 3 && password.length >= 6 && password == password2) {
+        if (email != "jan@wp.pl" && email.length > 3 && password.length >= 6 && password == password2) {
             $( "#nobutton" ).click();
         }
 
-        if (email == "aaaa") {
+        if (email == "jan@wp.pl") {
             var x = document.getElementById("reg-error");
             x.setAttribute("style", "visibility: visible");
             var y = document.getElementById("reg-email");
