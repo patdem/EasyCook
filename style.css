@@ -431,6 +431,12 @@ footer .icons {
     background-color: DodgerBlue !important;
     color: #ffffff;
 }
+
+.rainbow-text{
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 /*-------------*/
 =======
 /*-------FORMAT------*/
@@ -446,3 +452,9 @@ footer .icons {
 }
 >>>>>>> 7d34238d2b05845c67c235485e2738914af06d4f
 >>>>>>> dc5c65afaacb5e7946d5b84b38278e4c79693d1c
+
+.rainbow-text{
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

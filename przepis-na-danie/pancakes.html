@@ -1,9 +1,8 @@
-<!----- Ania ------>
 <!DOCTYPE html>
 <html lang="pl-PL">
 
 <head>
-    <title>Odznaki | EasyCook</title>
+    <title> Pancakes | EasyCook</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +13,7 @@
 </head>
 
 <body>
+
     <!-- Navbar -->
     <nav class="navbar navbar-dark navbar-expand-lg">
         <a class="navbar-brand" href="../index.html">
@@ -73,12 +73,26 @@
                 <li>
                     <a href="../konto/moje-konto.html" class="btn font-weight-bold" class="btn font-weight-bold" id="my-account">Moje konto</a>
                 </li>
+                <li>
+                    <a href="../index.html" class="btn font-weight-bold" class="btn font-weight-bold" onclick="logout()" id="log-out">Wyloguj</a>
+                </li>
             </ul>
         </div>
     </nav>
     <!-- /Navbar -->
 
-   <!-- Search -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Logo -->
+            <div class="col-lg-3 col-md-5 col-sm-6 text-center">
+                <img class="img-fluid logo-posilki" src="../img/logo.png">
+            </div>
+            <!-- /Logo -->
+
+            <div class="col-lg-9 col-md-7 col-sm-6">
+
+                <!-- Search -->
                 <br><br><br>
                 <form class="form-inline justify-content-center" action="">
                     <label for="search" class="mb-2 mr-sm-2"></label>
@@ -87,84 +101,125 @@
                 </form>
                 <br>
                 <!-- /Search -->
-    <div class="container">
-         <br>
-
-        <div class="row-fluid">
-            <h1 class="font-weight-light text-center text-lg-middle mt-4 mb-0 ">Sprawdź jakie odznaki możesz zdobyć</h1>
-            <br>
-            <br>
-            <br>
+            </div>
         </div>
-        <div class ="row">
-            <div class="col-lg-4 col-md-5 col-sm-12">
-                 <img class="img-fluid" src="../img/odznaka_pocz.png" alt="Odznaka1">
+        <hr>
+
+        <div class="container-fluid mx-auto">
+            <div class="row">
+                <h2 class="font-weight-light mt-4 mb-4 mx-auto">Puszyste placuszki pancakes</h2>
             </div>
-           <div class="col-lg-8 col-md-5 col-sm-12">
-               <h1 class="font-weight-light text-center text-lg-middle mt-4 mb-0 ">Już nie taki początkujący</h1>
-               <hr class="mt-2 mb-5">
-               <h3 class="font-weight-light mt-0 mb-4 mx-auto text-center">Ugotuj 5 dowolnych potraw.<br> Możesz to zrobić z rodzicem albo całkiem sam!</h3>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-6">
+                    <p class="font-weight-light text-uppercase mt-0 mb-4 mx-auto">Czas przygotowania: 30 min</p>
+                </div>
+                <div class="col-lg-3 col-md-2 col-6">
+                    <p class="font-weight-light text-uppercase mt-0 mb-4 mx-auto">Porcje: 6 </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <p class="font-weight-light text-uppercase mt-0 mb-4 mx-auto">Poziom: łatwy</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <p class="font-weight-light text-uppercase mt-0 mb-4 mx-auto">Ocena: 4,5/5</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-5 col-sm-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Składniki:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>350 g jogurtu naturalnego</td>
+                            </tr>
+                            <tr>
+                                <td>1 op. cukru wanilinowego</td>
+                            </tr>
+                            <tr>
+                                <td>2 jajka</td>
+                            </tr>
+                            <tr>
+                                <td>3 łyżki roztopionego masła</td>
+                            </tr>
+                            <tr>
+                                <td>225 g mąki</td>
+                            </tr>
+                            <tr>
+                                <td>1 łyżeczka sody oczyszczonej</td>
+                            </tr>
+                            <tr>
+                                <td>1/2 łyżeczki proszku do pieczenia</td>
+                            </tr>
+                         <tr>
+                                <td>tłuszcz do smażenia (np. olej kokosowy)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-8 col-md-7 col-sm-12">
+                    <div class="row">
+                         <h2 class="font-weight-light mt-0 mb-4 mx-auto text-center">Ten przepis wykonasz przy pomocy rodziców.<br> Pomogą Ci tylko przy smażeniu. Chyba nie chciałbyś się poparzyć?
+                         <br>Twoje zadania będą oznaczone<mark class="rainbow-text">w ten sposób</mark></h2>
+                        <img class="mx-auto d-block img-fluid" src="../img/puszyste_placuszki_pancakes.jpg" alt="pancakes">
+                    </div>
+                    <div class="row container-fluid">
+                        <div class="col-lg-4 col-md-4 col-sm-4" style="text-align:center;">
+                            <a href="#!" class="btn" id="comment">Skomentuj</a>
+                        </div>
+                        <div class="col-lg-4 col-md-5 col-sm-4" style="text-align:center;">
+                            <a class="btn" id="save">Dodaj do ulubionych</a>
+                        </div>
+                        <div class="col-lg-4 col-md-3 col-sm-4" style="text-align:center;">
+                            <a href="#!" class="btn" id="share">Udostępnij</a>
+                        </div>
+                    </div>
+                </div>
 
-                   <div class="col" style="text-align:center;">
-                       <a href="przepisy-odznaka1.html" class="btn btn-lg" id="see-all">Zobacz przepisy</a>
-                   </div>
+                <div class="row">
+                    <div class="col recipe">
+                        <h4 class="font-weight-bold mt-4 mb-3 mx-auto">Przygotowanie:</h4>
+                        <ul>
+                            <li>Krok 1.</li>
+                            Z pomocą dorosłego, roztop masło w rondelku na małym ogniu.
+                            <li><mark class="rainbow-text">Krok 2.</mark></li>
+                            Weź dużą miskę i wymieszaj w niej jogurt z cukrem wanilinowym oraz jajkami. Dodaj roztopione masło i znowu zamieszaj.
+                            <li><mark class="rainbow-text">Krok 3.</mark></li>
+                            Teraz weź drugą miskę, wsyp mąke, dodaj sodę oczyszczoną i proszek do pieczenia. <br>
+                            Przesyp suche składniki do składników z pierwszej miski (nie odwrotnie!) i wymieszać delikatnie.
+                            <li>Krok 4.</li>
+                            Dorosły rozgrzeje patelnię i ją lekko natłuści. <br>
+                            A razem, nakładajcie po 2 łyżki ciasta na 1 placka i smażcie przez ok. 1 - 2 minuty aż placki będą zrumienione od spodu.
+                            <li><mark class="rainbow-text">Krok 5.</mark></li>
+                            Usmażcie resztę placków i podawajcie ze swoimi ulubionymi dodatkami np. cukier puder, dżem, syrop klonowy, bita śmietana.
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
 
-           </div>
         </div>
-        <br>
-        <br>
-        <div class ="row">
-             <div class="col-lg-8 col-md-5 col-sm-12">
-                 <h1 class="font-weight-light text-center text-lg-middle mt-4 mb-0 ">Czekolaaada!</h1>
-                 <hr class="mt-2 mb-5">
-                 <h3 class="font-weight-light mt-0 mb-4 mx-auto text-center">Przygotuj 5 deserów z czekoladą. Mniam... <br> Tylko pamiętaj, żeby nie zjeść wszystkiego całkiem sam</h3>
-                 <div class="col" style="text-align:center;">
-                       <a href="odznaki.html" class="btn btn-lg" id="see-all">Zobacz przepisy</a>
-            </div>
-            </div>
-            <div class="col-lg-4 col-md-5 col-sm-12">
-                  <img class="img-fluid" src="../img/odznaka_czeko.png" alt="Odznaka2">
+         <div class="card">
+                <div class="card-header">
+                    KOMENTARZE
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>Super, syn miał mnóstwo zabawy, a ja pyszny obiad.</p>
+
+                        <a href="../img/pancakes_moje.jpg" target="_blank"><img style="width: 200px; margin-bottom: 10px" class="img-thumbnail" src="../img/pancakes_moje.jpg" alt="moj_makaron"></a>
+                        <footer class="blockquote-footer" style="background-color: white; float: end">&nbsp27.01.2020&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp<cite title="Source Title">  mariola55@gmail.com</cite></footer>
+                        <a href="#!" class="btn" id="share">Edytuj</a>
+                        <a href="../przepis-na-danie/makaron-z-tunczykiem-oliwkami.html" class="btn" id="share">Usuń</a>
+                    </blockquote>
+                    <hr>
+
+                </div>
             </div>
 
-        </div>
-        <br>
-        <br>
-         <div class ="row">
-            <div class="col-lg-4 col-md-5 col-sm-12">
-                 <img class="img-fluid" src="../img/odznaka_sam.png" alt="Odznaka3">
-            </div>
-           <div class="col-lg-8 col-md-5 col-sm-12">
-               <h1 class="font-weight-light text-center text-lg-middle mt-4 mb-0 ">Zrobiłem to sam</h1>
-               <hr class="mt-2 mb-5">
-               <h3 class="font-weight-light mt-0 mb-4 mx-auto text-center">Ugotuj 10 dowolnych potraw.<br> Trzeba poszukać przepisów, które zrobisz samodzielnie.</h3>
-
-                   <div class="col" style="text-align:center;">
-                       <a href="odznaki.html" class="btn btn-lg" id="see-all">Zobacz przepisy</a>
-                   </div>
-           </div>
-        </div>
-        <br>
-        <br>
-        <div class ="row">
-             <div class="col-lg-8 col-md-5 col-sm-12">
-                 <h1 class="font-weight-light text-center text-lg-middle mt-4 mb-0 ">Ziemniak to nie tylko frytki!</h1>
-                 <hr class="mt-2 mb-5">
-                 <h3 class="font-weight-light mt-0 mb-4 mx-auto text-center">Przygotuj 7 potraw z ziemniaka <br> Ugotuj, upiecz, pokrój, potłucz... nie zapomnij o soli!</h3>
-                 <div class="col" style="text-align:center;">
-                       <a href="odznaki.html" class="btn btn-lg" id="see-all">Zobacz przepisy</a>
-            </div>
-            </div>
-            <div class="col-lg-4 col-md-5 col-sm-12">
-                  <img class="img-fluid" src="../img/odznaka_ziemniak.png" alt="Odznaka4">
-            </div>
-
-        </div>
-        <br>
-        <br>
     </div>
-
-
-
 
     <!-- Footer -->
     <footer id="sticky-footer" class="py-4">
@@ -216,5 +271,24 @@
     <!-- /scripts -->
 
 </body>
+
+<script>
+    var cookies = document.cookie;
+
+    if (cookies == "zalogowany=tak") {
+        var x = document.getElementById("log-in");
+        x.setAttribute("style", "display: none");
+        var x = document.getElementById("my-account");
+        x.setAttribute("style", "display: block");
+        var x = document.getElementById("log-out");
+        x.setAttribute("style", "display: block");
+    }
+
+    function logout() {
+        document.cookie = "zalogowany=nie; path=/;";
+        location.replace("../index.html");
+    }
+
+</script>
 
 </html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <title>Przepisy | EasyCook</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../icons/home-solid.svg" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navb">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Posiłki
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="sniadanie.html">Śniadania</a>
+                        <a class="dropdown-item" href="lunch.html">Lunch</a>
+                        <a class="dropdown-item" href="obiad.html">Obiady</a>
+                        <a class="dropdown-item" href="kolacja.html">Kolacje</a>
+                        <a class="dropdown-item" href="deser.html">Desery</a>
+                        <a class="dropdown-item" href="przekaski.html">Przekąski</a>
+                        <a class="dropdown-item" href="wszystkie-przepisy.html">Wszystkie przepisy</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Diety
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="weganskie.html">Wegańskie</a>
+                        <a class="dropdown-item" href="wegetarianskie.html">Wegetariańskie</a>
+                        <a class="dropdown-item" href="bez-laktozy.html">Bez laktozy</a>
+                        <a class="dropdown-item" href="bez-glutenu.html">Bez glutenu</a>
+                        <a class="dropdown-item" href="wszystkie-przepisy.html">Wszystkie przepisy</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Poziom trudności
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="latwy.html">Łatwy</a>
+                        <a class="dropdown-item" href="sredni.html">Średni</a>
+                        <a class="dropdown-item" href="trudny.html">Trudny</a>
+                        <a class="dropdown-item" href="wszystkie-przepisy.html">Wszystkie przepisy</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../nauka-przez-gotowanie/gotowanie-z-dzieckiem.html">Gotowanie z dzieckiem</a>
+                </li>
+            </ul>
+            <ul class="nav justify-content-end">
+                <li class="nav-item button">
+                    <a href="../konto/logowanie-rejestracja.html" class="btn font-weight-bold" id="log-in">Zaloguj / Załóż konto</a>
+                </li>
+                <li>
+                    <a href="../konto/moje-konto.html" class="btn font-weight-bold" class="btn font-weight-bold" id="my-account">Moje konto</a>
+                </li>
+                <li>
+                    <a href="../index.html" class="btn font-weight-bold" class="btn font-weight-bold" onclick="logout()" id="log-out">Wyloguj</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- /Navbar -->
+ <!-- Comment -->
+
+    <!-- Button comment when not log-in -->
+    <button type="button" class="btn btn-primary" id="nobutton" data-toggle="modal" data-target="#exampleModal">
+    </button>
+
+    <!-- Modal register -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Zaloguj się!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Musisz być zalogowany, aby móc dodawać komentarze.
+                </div>
+                <div class="modal-footer center" style="text-align: center">
+                    <button onclick="account()" type="button" style="margin-right: 50px">Zaloguj</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button trigger comment when log-in -->
+    <button type="button" class="btn btn-primary" id="nobutton2" data-toggle="modal" data-target="#exampleModal2">
+    </button>
+
+    <!-- Modal register -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Komentarz</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Wpisz komentarz..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button style="margin-right: 115px; margin-left: 0" type="button" onclick="add_photo()">dodaj zdjęcie</button>
+                    <button type="button" onclick="add_comment()">dodaj komentarz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button trigger adding photo -->
+    <input style="width: 0; height: 0; visibility: hidden; position: fixed;" type="file" class="form-control-file" id="nobutton3">
+
+    <!-- /Comment -->
+
+    <!-- Adding recipe -->
+    <!-- Button add_recipe when not log-in -->
+    <button type="button" class="btn btn-primary" id="nobutton4" data-toggle="modal" data-target="#exampleModal4">
+    </button>
+
+    <!-- Modal register -->
+    <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Zaloguj się!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Musisz być zalogowany, aby móc dodać przepis do ulubionych.
+                </div>
+                <div class="modal-footer center" style="text-align: center">
+                    <button onclick="account()" type="button" style="margin-right: 50px">Zaloguj</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button add_recipe when log-in -->
+    <button type="button" class="btn btn-primary" id="nobutton5" data-toggle="modal" data-target="#exampleModal5">
+    </button>
+
+    <!-- Modal register -->
+    <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Dodano!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="margin: 0; border: 0">
+                    Przepis został dodany do zakładki "Moje ulubione" na Twoim koncie.
+                </div>
+                <div class="modal-footer center" style="text-align: center">
+                    <button onclick="my_account()" type="button" style="margin-right: 50px">Moje konto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Adding recipe -->
+
+
+    <div class="container">
+         <br>
+            <br>
+        <div class="row">
+
+            <!-- Logo -->
+            <div class="col-lg-3 col-md-5 col-sm-6 text-center">
+                <img class="img-fluid " src="../img/odznaka_pocz.png">
+            </div>
+            <!-- /Logo -->
+
+            <div class="col-lg-9 col-md-7 col-sm-6">
+
+                <!-- Search -->
+                <br><br><br>
+                <h1 class="font-weight-light text-center text-lg-middle mt-4 mb-0 ">Odznaka: Już nie taki początkujący</h1>
+                <br>
+                <br>
+                <form class="form-inline justify-content-center" action="">
+                    <label for="search" class="mb-2 mr-sm-2"></label>
+                    <div class="autocomplete">
+                        <input type="search" class="form-control" id="myInput" name="myCountry" placeholder="Szukaj...">
+                    </div>
+                    <button type="button" class="btn" id="btn-search" onclick="search()"><i class="fas fa-search"></i></button>
+                </form>
+                <br>
+                <!-- /Search -->
+            </div>
+        </div>
+        <hr>
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html"><img src="../icons/home-solid.svg" class="breadcrumb-img"></a></li>
+                <li class="breadcrumb-item active" aria-current="page">Przepisy</li>
+            </ol>
+        </nav>
+        <!-- /Breadcrumb -->
+
+        <div>
+            <h2 class="font-weight-light text-center text-lg-left mt-4 mb-0">Przepisy</h2>
+        </div>
+
+        <hr class="mt-2 mb-3">
+
+        <!-- Sort/Filtr -->
+
+        <!-- /Sort/Filtr -->
+
+        <hr class="mt-3 mb-4">
+
+        <!-- Gallery -->
+         <div class="container gallery">
+            <div class="row text-center text-lg-left">
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="../przepis-na-danie/przepis.html" class="d-block mb-4 h-100 text-dark">
+                        <img class="img-fluid img-thumbnail" src="../img/kurczak_po_meksykansku_01.jpg" alt="">
+                        <p class="text-center">Kurczak po meksykańsku</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="../przepis-na-danie/makaron-z-tunczykiem-oliwkami.html" class="d-block mb-4 h-100 text-dark">
+                        <img class="img-fluid img-thumbnail" src="../img/makaron_z_tunczykiem_oliwkami_01.jpg" alt="">
+                        <p class="text-center">Makaron z tuńczykiem i oliwkami</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="../przepis-na-danie/przepis.html" class="d-block mb-4 text-dark">
+                        <img class="img-fluid img-thumbnail" src="../img/pieczone_frytki_z_warzyw_01.jpg" alt="">
+                        <p class="text-center">Pieczone frytki z warzyw</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="../przepis-na-danie/przepis.html" class="d-block mb-4 text-dark">
+                        <img class="img-fluid img-thumbnail" src="../img/tosty_z_jajaecznica_boczkiem_awokado_01.jpg" alt="">
+                        <p class="text-center">Tosty z jajecznicą, boczkiem i awokado</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="../przepis-na-danie/przepis.html" class="d-block mb-4 h-100 text-dark">
+                        <img class="img-fluid img-thumbnail" src="../img/makaron_zapiekany_z_cukinia_boczkiem_01.jpg" alt="">
+                        <p class="text-center">Makaron zapiekany z cukinią i boczkiem</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="../przepis-na-danie/przepis.html" class="d-block mb-4 h-100 text-dark">
+                        <img class="img-fluid img-thumbnail" src="../img/gulasz_z_cukinii_01.jpg" alt="">
+                        <p class="text-center">Gulasz z cukinii</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="../przepis-na-danie/przepis.html" class="d-block mb-4 h-100 text-dark">
+                        <img class="img-fluid img-thumbnail" src="../img/salatka_owocowa_01.jpg" alt="">
+                        <p class="text-center">Sałatka owocowa</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="../przepis-na-danie/makaron-z-tunczykiem-oliwkami.html" class="d-block mb-4 text-dark">
+                        <img class="mini-img img-fluid img-thumbnail" src="../img/salatka_pieczone_bataty_ciecierzyca_01.jpg" alt="">
+                        <p class="text-center">Sałatka z pieczonych batatów i ciecierzycy</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="../przepis-na-danie/przepis.html" class="d-block mb-4 text-dark">
+                        <img class="img-fluid img-thumbnail" src="../img/zupa_curry_z_cukinia_01.jpg" alt="">
+                        <p class="text-center">Zupa curry z cukinią</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="../przepis-na-danie/przepis.html" class="d-block mb-4 h-100 text-dark">
+                        <img class="img-fluid img-thumbnail" src="../img/nalesniki_maslankowe_01.jpg" alt="">
+                        <p class="text-center">Naleśniki maślankowe</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="../przepis-na-danie/przepis.html" class="d-block mb-4 h-100 text-dark">
+                        <img class="img-fluid img-thumbnail" src="../img/brownie_z_maslem_orzechowym_01.jpg" alt="">
+                        <p class="text-center ">Brownie z masłem orzechowym</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="../przepis-na-danie/przepis.html" class="d-block mb-4 h-100 text-dark">
+                        <img class="img-fluid img-thumbnail" src="../img/owsianka_z_prazonymi_jablkami_01.jpg" alt="">
+                        <p class="text-center">Owsianka z prażonymi jabłkami</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- /Gallery -->
+
+        <hr>
+        <br>
+
+        <!-- Pagination -->
+        <div class="page-nav">
+            <nav>
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><span aria-hidden="true">&laquo;</span></a>
+                    </li>
+                    <li class="page-item"><span class="page-link activ" aria-disabled="true">1</span></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#"><span aria-hidden="true">&raquo;</span></a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <!-- /Pagination -->
+
+        <br>
+    </div>
+
+
+    <!-- Footer -->
+    <footer id="sticky-footer" class="py-4">
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <div class="col mx-auto">
+                    <h5 class="font-weight-bold text-uppercase text-center mt-3 mb-3">Przydatne linki</h5>
+                    <div class="row text-center mt-4">
+                        <div class="col"><a class="footer-text font-weight-bold" href="../serwis/o-nas.html">O nas</a></div>
+                        <div class="col"><a class="footer-text font-weight-bold" href="../serwis/kontakt.html">Kontakt</a></div>
+                        <div class="col"><a class="footer-text font-weight-bold" href="../serwis/regulamin.html">Regulamin</a></div>
+                    </div>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col mx-auto">
+                    <h5 class="font-weight-bold text-uppercase text-center mt-3 mb-3">Dołącz do nas!</h5>
+                    <div class="row  text-center">
+                        <div class="col">
+                            <a href="https://pl-pl.facebook.com/"><img class="icons" src="../icons/facebook-brands.svg"></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://twitter.com/?lang=pl"><img class="icons" src="../icons/twitter-brands.svg"></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.instagram.com/?hl=pl"><img class="icons" src="../icons/instagram-brands.svg"></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://pl.pinterest.com/"><img class="icons" src="../icons/pinterest-brands.svg"></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.youtube.com/?gl=PL"><img class="icons" src="../icons/youtube-brands.svg"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center mt-2">
+            <small>&copy;2020 Copyright: EasyCook</small>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/0ea1bad158.js" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+
+    <!-- /scripts -->
+
+</body>
+
+<script>
+    var cookies = document.cookie;
+
+    if (cookies == "zalogowany=tak") {
+        var x = document.getElementById("log-in");
+        x.setAttribute("style", "display: none");
+        var x = document.getElementById("my-account");
+        x.setAttribute("style", "display: block");
+        var x = document.getElementById("log-out");
+        x.setAttribute("style", "display: block");
+    }
+
+    function logout() {
+        document.cookie = "zalogowany=nie; path=/;";
+        location.replace("../index.html");
+    }
+
+
+    if (cookies === "zalogowany=tak") {
+        var x = document.getElementById("log-in");
+        x.setAttribute("style", "display: none");
+        var x = document.getElementById("my-account");
+        x.setAttribute("style", "display: block");
+        var x = document.getElementById("log-out");
+        x.setAttribute("style", "display: block");
+    } else document.cookie = "zalogowany=nie; path=/;";
+
+    function logout() {
+        document.cookie = "zalogowany=nie; path=/;";
+        location.replace("../index.html");
+    }
+
+    //Ukrywam okno z komunikatem
+    $(function() {
+        $( "#exampleModalCenter" ).dialog({
+            autoOpen: false,
+            show: {
+                duration: 0
+            },
+            hide: {
+                duration: 0
+            }
+        });
+    });
+
+    function comment() {
+        if (cookies === "zalogowany=nie") {
+            $( "#nobutton" ).click();
+        }
+        if (cookies === "zalogowany=tak") {
+            $( "#nobutton2" ).click();
+        }
+    }
+
+    function account() {
+        location.replace("../konto/logowanie-rejestracja.html");
+    }
+
+    function my_account() {
+        location.replace("../konto/moje-konto.html");
+    }
+
+    function add_photo() {
+        $( "#nobutton3" ).click();
+    }
+
+    function add_comment() {
+        location.replace("../komentarz/makaron_komentarz.html");
+    }
+
+    function add_recipe() {
+        if (cookies === "zalogowany=nie") {
+            $( "#nobutton4" ).click();
+        }
+        if (cookies === "zalogowany=tak") {
+            $( "#nobutton5" ).click();
+        }
+    }
+</script>
+
+
+
+
+</html>
