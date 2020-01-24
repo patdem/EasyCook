@@ -82,6 +82,60 @@
     <!-- /Navbar -->
 
 
+    <!-- Comment -->
+
+    <!-- Button trigger modal register -->
+    <button type="button" class="btn btn-primary" id="nobutton" data-toggle="modal" data-target="#exampleModal">
+    </button>
+
+    <!-- Modal register -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Zaloguj się!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Musisz być zalogowany, aby móc dodawać komentarze.
+                </div>
+                <div class="modal-footer center" style="text-align: center">
+                    <button onclick="account()" type="button" style="margin-right: 50px">Zaloguj</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button trigger modal register -->
+    <button type="button" class="btn btn-primary" id="nobutton2" data-toggle="modal" data-target="#exampleModal2">
+    </button>
+
+    <!-- Modal register -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Komentarz</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button style="margin-right: 100px; margin-left: 0" type="button" onclick="reset()">dodaj zdjęcie</button>
+                    <button type="button" onclick="reset()">dodaj komentarz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Comment -->
+
+
+
     <div class="container-fluid">
         <div class="row">
             <!-- Logo -->
@@ -172,7 +226,7 @@
                     </div>
                     <div class="row container-fluid">
                         <div class="col-lg-4 col-md-4 col-sm-4" style="text-align:center;">
-                            <a href="#!" class="btn" id="comment">Skomentuj</a>
+                            <a class="btn" onclick="comment()" id="comment">Skomentuj</a>
                         </div>
                         <div class="col-lg-4 col-md-5 col-sm-4" style="text-align:center;">
                             <a href="#!" class="btn" id="save">Zapisz przepis</a>
@@ -266,13 +320,38 @@
         x.setAttribute("style", "display: block");
         var x = document.getElementById("log-out");
         x.setAttribute("style", "display: block");
-    }
+    } else document.cookie = "zalogowany=nie; path=/;";
 
     function logout() {
         document.cookie = "zalogowany=nie; path=/;";
         location.replace("../index.html");
     }
 
+    //Ukrywam okno z komunikatem
+    $(function() {
+        $( "#exampleModalCenter" ).dialog({
+            autoOpen: false,
+            show: {
+                duration: 0
+            },
+            hide: {
+                duration: 0
+            }
+        });
+    });
+
+    function comment() {
+        if (cookies == "zalogowany=nie") {
+            $( "#nobutton" ).click();
+        }
+        if (cookies == "zalogowany=tak") {
+            $( "#nobutton2" ).click();
+        }
+    }
+
+    function account() {
+        location.replace("../konto/logowanie-rejestracja.html");
+    }
 </script>
 
 </html>

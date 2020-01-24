@@ -112,4 +112,7 @@ function search() {
     if (document.getElementById("myInput").value === "makaron") {
         location.replace("wyszukiwanie/makaron.html");
     }
+    if (document.getElementById("myInput").value === "zxc") {
+        location.replace("wyszukiwanie/zxc.html");
+    }
 }
