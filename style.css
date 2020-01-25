@@ -416,6 +416,68 @@ footer .icons {
     margin: 10px;
 }
 
+
+@media (max-width: 991px) {
+    #logowanie {
+        font-size: 14px;
+    }
+    #logowanie h2{
+        font-size: 24px;
+    }
+
+    .login-reg-panel #label-login,
+    .login-reg-panel #label-register {
+        width: 100px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+}
+@media(max-width: 575px) {
+    #logowanie {
+        font-size: 10px;
+    }
+    #logowanie h2, h3{
+        font-size: 14px;
+    }
+    #logowanie h4{
+        font-size: 10px;
+    }
+    .login-reg-panel #label-login,
+    .login-reg-panel #label-register {
+        width: 70px;
+        border-radius: 4px;
+        font-size: 12px;
+    }
+    .login-reg-panel {
+        width: 90%;
+    }
+
+    .white-panel {
+        width: 60%;
+        right: calc(50% - 40px);
+    }
+    .login-info-box {
+        width: 30%;
+        padding: 0;
+        padding-left: 10px;
+    }
+
+    .register-info-box {
+        width: 30%;
+        padding: 5px;
+    }
+
+    .login-show,
+    .register-show {
+        padding: 20px;
+    }
+
+    .right-log {
+        right: 10px !important;
+    }
+
+}
 /*-------------*/
 <<<<<<< HEAD
 
