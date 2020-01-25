@@ -105,24 +105,26 @@
         </div>
         <hr>
 
-        <div class="container-fluid mx-auto">
+        <div class="container mx-auto">
             <div class="row">
                 <h2 class="font-weight-light mt-4 mb-4 mx-auto">Puszyste placuszki pancakes</h2>
             </div>
+            <br><br>
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-6">
-                    <p class="font-weight-light text-uppercase mt-0 mb-4 mx-auto">Czas przygotowania: 30 min</p>
+                    <p class="font-weight-light text-center text-uppercase mt-0 mb-4 mx-auto">Czas przygotowania: 30 min</p>
                 </div>
                 <div class="col-lg-3 col-md-2 col-6">
-                    <p class="font-weight-light text-uppercase mt-0 mb-4 mx-auto">Porcje: 6 </p>
+                    <p class="font-weight-light text-center text-uppercase mt-0 mb-4 mx-auto">Porcje: 6 </p>
                 </div>
                 <div class="col-lg-3 col-md-3 col-6">
-                    <p class="font-weight-light text-uppercase mt-0 mb-4 mx-auto">Poziom: łatwy</p>
+                    <p class="font-weight-light text-center text-uppercase mt-0 mb-4 mx-auto">Poziom: łatwy</p>
                 </div>
                 <div class="col-lg-3 col-md-3 col-6">
-                    <p class="font-weight-light text-uppercase mt-0 mb-4 mx-auto">Ocena: 4,5/5</p>
+                    <p class="font-weight-light text-center text-uppercase mt-0 mb-4 mx-auto">Ocena: 4,5/5</p>
                 </div>
             </div>
+            <br><br>
             <div class="row">
                 <div class="col-lg-4 col-md-5 col-sm-12">
                     <table class="table">
@@ -183,17 +185,38 @@
                         <h4 class="font-weight-bold mt-4 mb-3 mx-auto">Przygotowanie:</h4>
                         <ul>
                             <li>Krok 1.</li>
-                            Z pomocą dorosłego, roztop masło w rondelku na małym ogniu.
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked" autocomplete="off" onClick="checkboxes();">
+                                    <label class="custom-control-label" for="defaultUnchecked">
+                                        Z pomocą dorosłego, roztop masło w rondelku na małym ogniu.</label>
+                            </div>
                             <li><mark class="rainbow-text">Krok 2.</mark></li>
-                            Weź dużą miskę i wymieszaj w niej jogurt z cukrem wanilinowym oraz jajkami. Dodaj roztopione masło i znowu zamieszaj.
+                             <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked1" autocomplete="off" onClick="checkboxes();">
+                                    <label class="custom-control-label" for="defaultUnchecked1">
+                            Weź dużą miskę i wymieszaj w niej jogurt z cukrem wanilinowym oraz jajkami. Dodaj roztopione masło i znowu zamieszaj.</label>
+                            </div>
                             <li><mark class="rainbow-text">Krok 3.</mark></li>
+                                         <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked2" autocomplete="off" onClick="checkboxes();">
+                                    <label class="custom-control-label" for="defaultUnchecked2">
                             Teraz weź drugą miskę, wsyp mąke, dodaj sodę oczyszczoną i proszek do pieczenia. <br>
-                            Przesyp suche składniki do składników z pierwszej miski (nie odwrotnie!) i wymieszać delikatnie.
+                            Przesyp suche składniki do składników z pierwszej miski (nie odwrotnie!) i wymieszać delikatnie.</label>
+                            </div>
                             <li>Krok 4.</li>
+                                         <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked3" autocomplete="off" onClick="checkboxes();">
+                                    <label class="custom-control-label" for="defaultUnchecked3">
                             Dorosły rozgrzeje patelnię i ją lekko natłuści. <br>
-                            A razem, nakładajcie po 2 łyżki ciasta na 1 placka i smażcie przez ok. 1 - 2 minuty aż placki będą zrumienione od spodu.
+                            A razem, nakładajcie po 2 łyżki ciasta na 1 placka i smażcie przez ok. 1 - 2 minuty aż placki będą zrumienione od spodu.</label>
+                            </div>
                             <li><mark class="rainbow-text">Krok 5.</mark></li>
-                            Usmażcie resztę placków i podawajcie ze swoimi ulubionymi dodatkami np. cukier puder, dżem, syrop klonowy, bita śmietana.
+                                         <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked4" autocomplete="off" onClick="checkboxes();">
+                                    <label class="custom-control-label" for="defaultUnchecked4">
+                            Usmażcie resztę placków i podawajcie ze swoimi ulubionymi dodatkami np. cukier puder, dżem, syrop klonowy, bita śmietana.</label>
+                            </div>
+
                         </ul>
                     </div>
                 </div>
@@ -215,11 +238,19 @@
                         <a href="../przepis-na-danie/makaron-z-tunczykiem-oliwkami.html" class="btn" id="share">Usuń</a>
                     </blockquote>
                     <hr>
-
                 </div>
             </div>
-
     </div>
+    <div id="myModal" class="box">
+    <!-- Box alert -->
+    <div class="box-content">
+    <span class="close">&times;</span>
+        <h2 class="center text-center font-weight-light">Gratulacje!<br> Udało Ci się zdobyć odznakę <br><br>
+            <img class="mx-auto d-block img-fluid " src="../img/odznaka_pocz.png" width="400" alt=""> </h2>
+    </div>
+    </div>
+
+</div>
 
     <!-- Footer -->
     <footer id="sticky-footer" class="py-4">
@@ -274,7 +305,8 @@
 
 <script>
     var cookies = document.cookie;
-
+    var span = document.getElementsByClassName("close")[0];
+    var box = document.getElementById("myModal");
     if (cookies == "zalogowany=tak") {
         var x = document.getElementById("log-in");
         x.setAttribute("style", "display: none");
@@ -287,6 +319,31 @@
     function logout() {
         document.cookie = "zalogowany=nie; path=/;";
         location.replace("../index.html");
+    }
+    function checkboxes()
+      {
+       var inputElems = document.getElementsByTagName("input"),
+        count = 0;
+        for (var i=0; i<inputElems.length; i++) {
+           if (inputElems[i].type == "checkbox" && inputElems[i].checked == true){
+              count++;
+           }
+           if(count==5){
+               console.log("sdad")
+               box.style.display = "block";
+           }
+        }
+     }
+    // Zamknij okno po kliknięciu x
+    span.onclick = function() {
+        box.style.display = "none";
+    }
+
+    // Zamknij okno po kliknięciu gdziekolwiek
+    window.onclick = function(event) {
+        if (event.target == box) {
+            box.style.display = "none";
+        }
     }
 
 </script>
