@@ -44,8 +44,7 @@ filtr {
 }
 #sort2,
 filtr {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 5px;
     background-color: #1A2366;
     border-color: #EF9F0B;
     color: #EF9F0B;
@@ -66,7 +65,9 @@ filtr {
     border-color: #EF9F0B;
     color: #EF9F0B;
 }
-
+button>.btn {
+    margin: 5px;
+}
 /*-------------*/
 
 
@@ -484,6 +485,10 @@ footer .icons {
 
     .right-log {
         right: 10px !important;
+    }
+    
+    .container-slides h4 {
+        font-size: 20px;
     }
 
 }
