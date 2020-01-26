@@ -152,7 +152,7 @@
                                 <label class="custom-control-label" for="customCheck1">Makaron</label>
                             </div>
                             <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck2" name="meat" autocomplete="off">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2" name="meat" autocomplete="off" onClick="checkboxes(this.id);">
                                 <label class="custom-control-label" for="customCheck2">Kurczak</label>
                             </div>
                             <div class="custom-control custom-checkbox">
@@ -175,7 +175,7 @@
                                 <input type="checkbox" class="custom-control-input" id="customCheck7" name="example1" autocomplete="off">
                                 <label class="custom-control-label" for="customCheck7">Warzywa</label>
                             </div><br>
-                            <button type="button" class="btn" id="sort" data-toggle="collapse">Filtruj</button>
+                            <button type="button" class="btn" id="sort" data-toggle="collapse" onClick="checkboxes(this.id);">Filtruj</button>
                         </form>
                     </div>
                 </div>
@@ -407,6 +407,22 @@
         document.cookie = "zalogowany=nie; path=/;";
         location.replace("../index.html");
     }
+     function checkboxes(clicked)
+      {
+       var inputElems = document.getElementsByTagName("input");
+       var btnn = this;
+        count = 0;
+        for (var i=0; i<inputElems.length; i++) {
+           if (inputElems[i].type == "checkbox" && inputElems[i].checked == true){
+              count++;
+           }
+
+        }
+        if( clicked == "sort" && count >= 1 ){
+                location.replace("przefiltrowane.html");
+           }
+     }
+
 
 </script>
 
