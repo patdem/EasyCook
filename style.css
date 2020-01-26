@@ -42,6 +42,15 @@ filtr {
     color: #EF9F0B;
     display: block;
 }
+#sort2,
+filtr {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #1A2366;
+    border-color: #EF9F0B;
+    color: #EF9F0B;
+    display: block;
+}
 
 #navb ul li a#log-out,
 #navb ul li a#my-account {
@@ -567,8 +576,12 @@ footer .icons {
     padding: 20px;
     border: 1px solid #888;
     width: 50%;
+	height:auto;
     /* Could be more or less, depending on screen size */
-    height: 60%;
+}
+.box-header {
+    background-color: #1A2366;
+    color: white;
 }
 
 /* The Close Button */

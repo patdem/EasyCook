@@ -122,47 +122,112 @@
         <hr class="mt-2 mb-3">
 
         <!-- Sort/Filtr -->
-        <div class="container">
-            <button type="button" class="btn" id="sort" data-toggle="collapse" data-target="#coll-sort">Sortuj</button>
-            <div id="coll-sort" class="collapse">
-                <p>według:</p>
-                <form>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="customRadio" name="sort-data" value="sort-data">
-                        <label class="custom-control-label" for="customRadio">daty publikacji</label>
+              <div class="container">
+            <div class ="row">
+                <div class="col-lg-3 col-md-4 col-6">
+                    <button type="button" class="btn" id="sort" data-toggle="collapse" data-target="#coll-sort">Sortuj</button>
+                    <div id="coll-sort" class="collapse">
+                        <p>według:</p>
+                        <form>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" id="customRadio" name="sort-data" value="sort-data" autocomplete="off">
+                                <label class="custom-control-label" for="customRadio">daty publikacji</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" id="customRadio2" name="sort-pop" value="sort-pop" autocomplete="off">
+                                <label class="custom-control-label" for="customRadio2">popularności</label>
+                            </div>
+                        </form>
                     </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="customRadio" name="sort-pop" value="sort-pop">
-                        <label class="custom-control-label" for="customRadio">popularności</label>
-                    </div>
-                </form>
-            </div>
-            <br>
-            <button type="button" class="btn" id="sort" data-toggle="collapse" data-target="#coll-filtr">Filtruj</button>
-            <div id="coll-filtr" class="collapse">
+                </div>
                 <br>
-                <form>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                        <label class="custom-control-label" for="customCheck">Makaron</label>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <button type="button" class="btn" id="sort" data-toggle="collapse" data-target="#coll-filtr">Składniki</button>
+                    <div id="coll-filtr" class="collapse">
+                        <br>
+                        <form>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1" name="example1" autocomplete="off">
+                                <label class="custom-control-label" for="customCheck1">Makaron</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2" name="meat" autocomplete="off">
+                                <label class="custom-control-label" for="customCheck2">Kurczak</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck3" name="meat" autocomplete="off">
+                                <label class="custom-control-label" for="customCheck3">Wołowina</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck4" name="meat" autocomplete="off">
+                                <label class="custom-control-label" for="customCheck4">Wieprzowina</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck5" name="example1" autocomplete="off">
+                                <label class="custom-control-label" for="customCheck5">Ryż</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck6" name="example1" autocomplete="off">
+                                <label class="custom-control-label" for="customCheck6">Kasza</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck7" name="example1" autocomplete="off">
+                                <label class="custom-control-label" for="customCheck7">Warzywa</label>
+                            </div><br>
+                            <button type="button" class="btn" id="sort" data-toggle="collapse">Filtruj</button>
+                        </form>
                     </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <button type="button" class="btn" id="sort2" data-toggle="collapse" data-target="#coll-filtr2">Czas przygotowania</button>
+                    <div id="coll-filtr2" class="collapse">
+                        <br>
+                        <form>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck11" name="example1" autocomplete="off">
+                                <label class="custom-control-label" for="customCheck11">< 10 minut</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck12" name="example1" autocomplete="off">
+                                <label class="custom-control-label" for="customCheck12">< 30 minut</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck13" name="example1" autocomplete="off">
+                                <label class="custom-control-label" for="customCheck13">< 1 godzina</label>
+                            </div>
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                        <label class="custom-control-label" for="customCheck">Kurczak</label>
+                        <input type="checkbox" class="custom-control-input" id="customCheck14" name="example1" autocomplete="off">
+                        <label class="custom-control-label" for="customCheck14">> 1 godzina</label>
+                    </div><br>
+                            <button type="button" class="btn" id="sort" data-toggle="collapse">Filtruj</button>
+                        </form>
                     </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                        <label class="custom-control-label" for="customCheck">Łatwe</label>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <button type="button" class="btn" id="sort" data-toggle="collapse" data-target="#coll-filtr3">Ilość porcji</button>
+                    <div id="coll-filtr3" class="collapse">
+                        <br>
+                        <form>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck21" name="example1" autocomplete="off">
+                                <label class="custom-control-label" for="customCheck21">1-2</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck22" name="example1" autocomplete="off">
+                                <label class="custom-control-label" for="customCheck22">2-5</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck23" name="example1" autocomplete="off">
+                                <label class="custom-control-label" for="customCheck23">5-10</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck24" name="example1" autocomplete="off">
+                                <label class="custom-control-label" for="customCheck24">>10</label>
+                            </div><br>
+                            <button type="button" class="btn" id="sort" data-toggle="collapse">Filtruj</button>
+                        </form>
                     </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                        <label class="custom-control-label" for="customCheck">Średnie</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                        <label class="custom-control-label" for="customCheck">Trudne</label>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
         <!-- /Sort/Filtr -->
